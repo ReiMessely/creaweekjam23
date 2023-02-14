@@ -4,31 +4,25 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float healthAmount = 10;
-    private float maxHealth;
+    [SerializeField] private float _healthAmount = 10;
+    private float _maxHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = healthAmount;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _maxHealth = _healthAmount;
     }
 
     public void TakeDamage(float damage)
     {
-        healthAmount -= damage;
+        _healthAmount -= damage;
     }
 
     public float HealthPercentage
     {
         get
         {
-            return healthAmount / maxHealth;
+            return _healthAmount / _maxHealth;
         }
     }
 
@@ -36,7 +30,7 @@ public class Health : MonoBehaviour
     {
         get
         {
-            return healthAmount;
+            return _healthAmount;
         }
     }
 
@@ -44,7 +38,7 @@ public class Health : MonoBehaviour
     {
         get 
         { 
-            return maxHealth; 
+            return _maxHealth; 
         }
     }
 
@@ -52,7 +46,7 @@ public class Health : MonoBehaviour
     {
         get 
         {
-            return (healthAmount <= 0);
+            return (_healthAmount <= 0);
         }
     }
 }

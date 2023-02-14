@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _mainCamera;
     private Camera _mainCameraRef;
     [SerializeField] private GameObject _capsule;
-
+    [SerializeField] private GameObject _boomerang;
+    [SerializeField] private int _nrBoomerangs;
+    private int _boomerangsInUse;
 
 
     public void OnMove(InputAction.CallbackContext context)
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         LookAtMouse();
         MovePlayer();
+        HandleShooting();
     }
 
     public void MovePlayer()
@@ -51,5 +54,23 @@ public class PlayerController : MonoBehaviour
             
             _capsule.transform.LookAt(new Vector3(vectorToLookAt.x,_capsule.transform.position.y,vectorToLookAt.z));
         }
+    }
+
+    private void HandleShooting()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(_boomerangsInUse < _nrBoomerangs)
+            {
+                Instantiate(_boomerang, _capsule.transform.position, _capsule.transform.rotation);
+                ++_boomerangsInUse;
+            }
+           
+        }
+    }
+
+    public void ReturnBoomerang()
+    {
+        --_boomerangsInUse;
     }
 }

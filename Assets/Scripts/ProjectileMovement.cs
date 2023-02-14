@@ -16,8 +16,11 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Health damage code comes here
-
+        Health targetHealth = other.GetComponent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.TakeDamage(_damage);
+        }
         Kill();
     }
 

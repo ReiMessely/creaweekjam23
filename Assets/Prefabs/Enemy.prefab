@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4779517897561715483}
   - component: {fileID: 4314031278941934921}
+  - component: {fileID: 309698747627686902}
   - component: {fileID: 2560218279347519304}
   - component: {fileID: 7840235750716889954}
   m_Layer: 0
@@ -57,6 +58,19 @@ MonoBehaviour:
   _meleeBox: {fileID: 7636857088517767135}
   _rateOfFire: 1
   _meleeDamage: 1
+--- !u!114 &309698747627686902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592634027975768837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afeafed046db3d146b4b61a4f0cf7cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthAmount: 4
 --- !u!195 &2560218279347519304
 NavMeshAgent:
   m_ObjectHideFlags: 0

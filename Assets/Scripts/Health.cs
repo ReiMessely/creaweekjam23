@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
         else if (OnDeath != null)
         {
             OnDeath();
-            Kill();
+            Destroy(gameObject);
         }
 
 

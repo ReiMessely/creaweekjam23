@@ -96,4 +96,14 @@ public class BoomerangProjectile : MonoBehaviour
     {
         _maxDistance += amount;
     }
+
+    public static void SetDamage(float amount) 
+    {
+        _damage = amount;
+    }
+
+    public static void SetDistance(float amount) 
+    {
+        _maxDistance = amount;
+    }
 }

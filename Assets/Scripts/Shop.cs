@@ -23,8 +23,8 @@ public class Shop : MonoBehaviour
     void Start()
     {
         _audioSourceShopNotification = GetComponent<AudioSource>();
-        BoomerangProjectile.AddDistance(5);
-        BoomerangProjectile.AddDamage(1);
+        BoomerangProjectile.SetDistance(5);
+        BoomerangProjectile.SetDamage(1);
 
         DisableShop();
     }

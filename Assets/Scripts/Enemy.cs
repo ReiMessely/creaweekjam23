@@ -119,6 +119,6 @@ public class Enemy : MonoBehaviour
 
     void OnDeath()
     {
-        Debug.Log("Enemy Dead");
+
     }
 }

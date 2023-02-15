@@ -16,6 +16,11 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Enemy")
+        {
+            return;
+        }
+
         Health targetHealth = other.GetComponentInParent<Health>();
         if (targetHealth != null)
         {

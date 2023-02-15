@@ -28,15 +28,6 @@ public class PlayerController : MonoBehaviour
         _mainCameraRef = _mainCamera.GetComponent<Camera>();
     }
 
-    private void OnEnable()
-    {
-        Health.OnDeath += OnDeath;
-    }
-
-    private void OnDisable()
-    {
-        Health.OnDeath -= OnDeath;
-    }
 
     // Update is called once per frame
     void Update()
@@ -58,24 +49,24 @@ public class PlayerController : MonoBehaviour
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
-        if(groundPlane.Raycast(cameraRay,out rayLength))
+        if (groundPlane.Raycast(cameraRay, out rayLength))
         {
-            Vector3 vectorToLookAt =cameraRay.GetPoint(rayLength);
-            
-            _capsule.transform.LookAt(new Vector3(vectorToLookAt.x,_capsule.transform.position.y,vectorToLookAt.z));
+            Vector3 vectorToLookAt = cameraRay.GetPoint(rayLength);
+
+            _capsule.transform.LookAt(new Vector3(vectorToLookAt.x, _capsule.transform.position.y, vectorToLookAt.z));
         }
     }
 
     private void HandleShooting()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(_boomerangsInUse < _nrBoomerangs)
+            if (_boomerangsInUse < _nrBoomerangs)
             {
                 Instantiate(_boomerang, _capsule.transform.position, _capsule.transform.rotation);
                 ++_boomerangsInUse;
             }
-           
+
         }
     }
 
@@ -84,8 +75,5 @@ public class PlayerController : MonoBehaviour
         --_boomerangsInUse;
     }
 
-    void OnDeath()
-    {
-        Debug.Log("pLAYER DEAD");
-    }
+
 }

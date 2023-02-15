@@ -25,10 +25,16 @@ public class Health : MonoBehaviour
         if (_healthAmount > 0)
             return;
 
-        if (OnDeath != null) 
+        if (gameObject.tag == "Player")
+        {
+            Debug.Log("play death");
+        }
+        else if (OnDeath != null)
         {
             OnDeath();
         }
+
+
 
         Destroy(gameObject);
 
@@ -52,15 +58,15 @@ public class Health : MonoBehaviour
 
     public float MaxHealth
     {
-        get 
-        { 
-            return _maxHealth; 
+        get
+        {
+            return _maxHealth;
         }
     }
 
     public bool IsDead
     {
-        get 
+        get
         {
             return (_healthAmount <= 0);
         }

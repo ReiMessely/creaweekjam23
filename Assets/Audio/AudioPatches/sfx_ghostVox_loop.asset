@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f783e0d2b79f46a4a91390e44081bdd8, type: 3}
+  m_Name: sfx_ghostVox_loop
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: e7a0e608e3b7c52429a0d6c617f89e15, type: 3}
+  - {fileID: 8300000, guid: 002bf591310ffff4c979b4410c86fa58, type: 3}
+  - {fileID: 8300000, guid: 981bb77e2c6b3fe498963cc656b05ad9, type: 3}
+  maxVolume: 1
+  minVolume: 0.711
+  minPitch: -3
+  maxPitch: 3

@@ -17,8 +17,8 @@ public class MeleeAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Health playerHealth = other.gameObject.GetComponent<Health>();
-            playerHealth.TakeDamage(_enemyScript.Damage);
+            Health targetHealth = other.GetComponentInParent<Health>();
+            targetHealth.TakeDamage(_enemyScript.Damage);
         }
     }
 

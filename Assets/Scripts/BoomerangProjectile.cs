@@ -7,10 +7,13 @@ public class BoomerangProjectile : MonoBehaviour
     [SerializeField] private float _maxDistance;
     [SerializeField] private float _grabRange;
     [SerializeField] private float _initialSpeed;
+    [SerializeField] private float _damage = 1;
     private GameObject _playerRef;
     private float _currentSpeed;
     private float _acceleration;
     private Vector3 _startPos;
+    private bool _canDamage = true;
+    private bool _isGoingBack = false;
 
     private void Start()
     {
@@ -31,7 +34,11 @@ public class BoomerangProjectile : MonoBehaviour
         }
         else
         {
-       
+            if (!_isGoingBack)
+            {
+                _isGoingBack = true;
+                _canDamage = true;
+            }
             transform.position += Time.deltaTime * _currentSpeed * ( transform.position - _playerRef.transform.position ).normalized;
         }
       
@@ -42,6 +49,27 @@ public class BoomerangProjectile : MonoBehaviour
         {
             Kill();
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            return;
+        }
+
+        if (!_canDamage)
+        {
+            return;
+        }
+        Health targetHealth = other.GetComponentInParent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.TakeDamage(_damage);
+            _canDamage = false;
+        }
+        
+ 
     }
 
     void Kill()

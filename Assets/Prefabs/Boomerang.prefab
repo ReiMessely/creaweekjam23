@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2179932098474495165}
-  m_Mesh: {fileID: 6657998009922166292, guid: ad835450a4465b54799fc2ee0b5341b2, type: 3}
+  m_Mesh: {fileID: 6657998009922166292, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
 --- !u!23 &5140125045198166222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   _maxDistance: 10
   _grabRange: 2
   _initialSpeed: 40
+  _damage: 1
 --- !u!33 &4824635529861155454
 MeshFilter:
   m_ObjectHideFlags: 0

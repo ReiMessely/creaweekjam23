@@ -8,7 +8,7 @@ public class BoomerangProjectile : MonoBehaviour
     [SerializeField] private float _grabRange;
     [SerializeField] private float _initialSpeed;
     [SerializeField] static private float _damage = 1;
-    private GameObject _playerRef;
+    private GameObject _playerRef = null;
     private float _currentSpeed;
     private float _acceleration;
     private Vector3 _startPos;
@@ -20,12 +20,15 @@ public class BoomerangProjectile : MonoBehaviour
         _startPos = transform.position;
         _acceleration = GetDeaccel(0f, _initialSpeed, _maxDistance);
         _currentSpeed = _initialSpeed;
-        _playerRef = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     void Update()
     {
+        if (_playerRef == null)
+        {
+            _playerRef = GameObject.Find("Player");
+        }
+
         _currentSpeed += _acceleration * Time.deltaTime;
       
 
@@ -77,7 +80,11 @@ public class BoomerangProjectile : MonoBehaviour
 
     void Kill()
     {
-        _playerRef.GetComponent<PlayerController>().ReturnBoomerang();
+        PlayerController pc = _playerRef.GetComponent<PlayerController>();
+        if (pc)
+        {
+            pc.ReturnBoomerang();
+        }
         Destroy(gameObject);
 
     }

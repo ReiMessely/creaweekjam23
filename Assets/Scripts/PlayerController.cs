@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] static private int _nrBoomerangs;
     private int _boomerangsInUse;
 
+    [SerializeField] private Animator animator;
+
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -42,6 +44,17 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(_move.x, 0f, _move.y);
         transform.Translate(movement * _speed * Time.deltaTime, Space.World);
+        if (animator)
+        {
+            if (movement.sqrMagnitude > float.Epsilon)
+            {
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+        }
     }
 
     private void LookAtMouse()

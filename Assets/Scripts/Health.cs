@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float _healthAmount = 10;
     private float _maxHealth;
+
+    public delegate void OnDeathAction();
+    public static event OnDeathAction OnDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +20,18 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _healthAmount -= damage;
+        Debug.Log(_healthAmount);
+        Math.Clamp(_healthAmount, 0, _healthAmount);
+        if (_healthAmount > 0)
+            return;
+
+        if (OnDeath != null) 
+        {
+            OnDeath();
+        }
+
+        Destroy(gameObject);
+
     }
 
     public float HealthPercentage

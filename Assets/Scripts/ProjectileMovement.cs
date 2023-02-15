@@ -16,7 +16,7 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Health targetHealth = other.GetComponent<Health>();
+        Health targetHealth = other.GetComponentInParent<Health>();
         if (targetHealth != null)
         {
             targetHealth.TakeDamage(_damage);

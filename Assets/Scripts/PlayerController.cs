@@ -28,6 +28,16 @@ public class PlayerController : MonoBehaviour
         _mainCameraRef = _mainCamera.GetComponent<Camera>();
     }
 
+    private void OnEnable()
+    {
+        Health.OnDeath += OnDeath;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnDeath -= OnDeath;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -72,5 +82,10 @@ public class PlayerController : MonoBehaviour
     public void ReturnBoomerang()
     {
         --_boomerangsInUse;
+    }
+
+    void OnDeath()
+    {
+
     }
 }

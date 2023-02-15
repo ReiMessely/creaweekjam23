@@ -18,6 +18,7 @@ public class SurfaceCaster : MonoBehaviour
         bool didHit = Physics.Raycast(ray, out RaycastHit rayCastHit, 3f, _layerMask);
         if (didHit) //this boolean determines if it hit, and also contains a bunch of info about the hit
         {
+            
             Debug.Log("hit");
             SoundSurfaceIDIdentifier surfaceId = rayCastHit.collider.GetComponent<SoundSurfaceIDIdentifier>(); //copies over the soundsurfaceid of the hit object
             AudioPatch surfacePatch = _surfaceMap.GetPatch(surfaceId.Surface); //gets the corresponding patch

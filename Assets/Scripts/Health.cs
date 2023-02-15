@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         if (_isDying) { return; }
 
         _healthAmount -= damage;
-        Debug.Log(_healthAmount);
+      
         Math.Clamp(_healthAmount, 0, _healthAmount);
         if (_healthAmount > 0)
             return;

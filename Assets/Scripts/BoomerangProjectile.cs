@@ -57,7 +57,7 @@ public class BoomerangProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+       
         if (other.gameObject.tag == "Player")
         {
           

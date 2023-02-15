@@ -23,7 +23,9 @@ public class WaveSpawner : MonoBehaviour
     public Wave wave;
     [SerializeField] GameObject target;
     [SerializeField] GameObject shopRef;
+    [SerializeField] GameObject lightManagerRef;
     private Shop shop;
+    private LightingManager lightManager;
 
     public Transform[] spawnLocations;
 
@@ -41,6 +43,7 @@ public class WaveSpawner : MonoBehaviour
     {
         waveCountdown = timeBetweenWaves;
         shop = shopRef.GetComponent<Shop>();
+        lightManager = lightManagerRef.GetComponent<LightingManager>();
     }
 
     private void Update()
@@ -65,6 +68,7 @@ public class WaveSpawner : MonoBehaviour
                 {
                     shop.DisableShop();
                     isShopActive = false;
+                    lightManager.TransitionToState();
                 }
                 StartCoroutine(SpawnWave(wave));
             }
@@ -86,6 +90,7 @@ public class WaveSpawner : MonoBehaviour
         ++wave.count;
         spawnState = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
+        lightManager.TransitionToState();
     }
 
     private bool IsEnemyAlive()

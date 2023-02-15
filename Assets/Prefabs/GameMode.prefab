@@ -47,11 +47,13 @@ MonoBehaviour:
   wave:
     name: The only wave
     enemy: {fileID: 4592634027975768837, guid: be74937ade9d0e245b7339df39487303, type: 3}
-    count: 10
+    count: 3
     rate: 1
   target: {fileID: 0}
+  shopRef: {fileID: 0}
   spawnLocations:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 15
+  waveCountdown: 0

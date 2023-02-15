@@ -22,11 +22,16 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave wave;
     [SerializeField] GameObject target;
+    [SerializeField] GameObject shopRef;
+    private Shop shop;
 
     public Transform[] spawnLocations;
 
     public float timeBetweenWaves = 5f;
-    private float waveCountdown;
+
+    private bool isShopActive = false;
+
+    public float waveCountdown;
 
     private float searchCountDown = 1f;
 
@@ -35,6 +40,7 @@ public class WaveSpawner : MonoBehaviour
     private void Start()
     {
         waveCountdown = timeBetweenWaves;
+        shop = shopRef.GetComponent<Shop>();
     }
 
     private void Update()
@@ -55,11 +61,22 @@ public class WaveSpawner : MonoBehaviour
         {
             if (spawnState != SpawnState.SPAWNING)
             {
+                if (isShopActive)
+                {
+                    shop.DisableShop();
+                    isShopActive = false;
+                }
                 StartCoroutine(SpawnWave(wave));
             }
         }
         else
         {
+            if (!isShopActive)
+            {
+                shop.EnableShop();
+                isShopActive = true;
+            }
+           
             waveCountdown -= Time.deltaTime;
         }
     }

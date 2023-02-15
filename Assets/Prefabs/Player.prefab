@@ -102,7 +102,6 @@ MonoBehaviour:
   _mainCamera: {fileID: 0}
   _capsule: {fileID: 2941516620559272811}
   _boomerang: {fileID: 3507155125034191563, guid: dc9d1236776646443913adf49ac88b17, type: 3}
-  _nrBoomerangs: 1
 --- !u!114 &2941516621674339706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +300,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2941516620559272791}
     m_Modifications:
+    - target: {fileID: -9180837126526410050, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -8692418528526818655, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -345,22 +352,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7523983999400443184, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5718239507956262479, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4e44bc01228cbf840ad6bc0476d53a4b, type: 2}
+    - target: {fileID: -5139226463078467618, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -3805665867772209786, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -3182824655364000669, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -3113672839897850966, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -1580653478621439098, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -622266407653212515, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 468194832622757143, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 879566117264627208, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 897489801828731619, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
       propertyPath: m_Name
       value: Gnome
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318644841640005743, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2045899823621156043, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4e44bc01228cbf840ad6bc0476d53a4b, type: 2}
+    - target: {fileID: 4939444042383979570, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 396cb0dcb26295e4e8afacc1e15d5247, type: 2}
+    - target: {fileID: 8831280869839998352, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
 --- !u!1 &2327754388260504904 stripped

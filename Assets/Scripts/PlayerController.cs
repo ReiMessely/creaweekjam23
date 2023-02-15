@@ -86,6 +86,6 @@ public class PlayerController : MonoBehaviour
 
     void OnDeath()
     {
-
+        Debug.Log("pLAYER DEAD");
     }
 }

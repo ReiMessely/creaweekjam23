@@ -3,7 +3,12 @@ guid: 42b74057edbdea749a0f14e07a13d35d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gnome
+    second: {fileID: 2100000, guid: 4e44bc01228cbf840ad6bc0476d53a4b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

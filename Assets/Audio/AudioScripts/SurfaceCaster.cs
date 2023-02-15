@@ -13,11 +13,12 @@ public class SurfaceCaster : MonoBehaviour
     public void CastForSurface()
     {
         Vector3 _vector = new Vector3(0, 1, 0);
-        Ray ray = new Ray((transform.position + _vector), Vector3.down);
+        Ray ray = new Ray((transform.position + _vector), new Vector3(0, -5, 0));
         //makes a new ray that goes from the starting position to the end position
         bool didHit = Physics.Raycast(ray, out RaycastHit rayCastHit, 3f, _layerMask);
         if (didHit) //this boolean determines if it hit, and also contains a bunch of info about the hit
         {
+            Debug.Log("hit");
             SoundSurfaceIDIdentifier surfaceId = rayCastHit.collider.GetComponent<SoundSurfaceIDIdentifier>(); //copies over the soundsurfaceid of the hit object
             AudioPatch surfacePatch = _surfaceMap.GetPatch(surfaceId.Surface); //gets the corresponding patch
             _playerAudioScript.PlayFootstep(surfacePatch); //calls the corresponding playerAudio function to play the footsteps

@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f783e0d2b79f46a4a91390e44081bdd8, type: 3}
   m_Name: sfx_footsteps_tile
   m_EditorClassIdentifier: 
-  _audioClips: []
+  _audioClips:
+  - {fileID: 8300000, guid: 2f457dae5420333449a76ccbfbb1e579, type: 3}
+  - {fileID: 8300000, guid: 7d8ab067110325644b281eb72edbd959, type: 3}
+  - {fileID: 8300000, guid: 7f514c72da4d6b74498b025c5a692cf2, type: 3}
+  - {fileID: 8300000, guid: a7d56dfa9242c9245a0a9a73b0dfb552, type: 3}
+  - {fileID: 8300000, guid: 6811c433263691845a82e63b41b34fc4, type: 3}
+  - {fileID: 8300000, guid: cd3a09c2d09707d44af8b381ecb91f94, type: 3}
   maxVolume: 1
-  minVolume: 1
-  minPitch: 1
-  maxPitch: 1
+  minVolume: 0.854
+  minPitch: 0.86
+  maxPitch: 1.21

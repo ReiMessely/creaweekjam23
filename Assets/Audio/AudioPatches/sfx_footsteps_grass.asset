@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f783e0d2b79f46a4a91390e44081bdd8, type: 3}
   m_Name: sfx_footsteps_grass
   m_EditorClassIdentifier: 
-  _audioClips: []
+  _audioClips:
+  - {fileID: 8300000, guid: 650ae840b19eb1d46b66212f8d007bd1, type: 3}
+  - {fileID: 8300000, guid: f267b6848bf3f924d95e2716bb412dfb, type: 3}
+  - {fileID: 8300000, guid: 96745fb70b91c0d47b0f251cb06aa033, type: 3}
+  - {fileID: 8300000, guid: 14cfd9418bfcc174db7a8922c20e4f44, type: 3}
+  - {fileID: 8300000, guid: f04a1df7602fabd4b8ce8e5466a24fe5, type: 3}
   maxVolume: 1
-  minVolume: 1
-  minPitch: 1
-  maxPitch: 1
+  minVolume: 0.854
+  minPitch: 0.86
+  maxPitch: 1.21

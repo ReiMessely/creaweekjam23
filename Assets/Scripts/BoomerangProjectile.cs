@@ -21,6 +21,7 @@ public class BoomerangProjectile : MonoBehaviour
         _acceleration = GetDeaccel(0f, _initialSpeed, _maxDistance);
         _currentSpeed = _initialSpeed;
         _playerRef = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     void Update()
@@ -44,8 +45,8 @@ public class BoomerangProjectile : MonoBehaviour
       
        
         float distance = Vector3.Distance(transform.position, _playerRef.transform.position);
-       
-        if (distance <= _grabRange && _currentSpeed <0)
+
+        if (distance <= _grabRange && _currentSpeed < 0)
         {
             Kill();
         }
@@ -53,8 +54,10 @@ public class BoomerangProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Player")
         {
+          
             return;
         }
 

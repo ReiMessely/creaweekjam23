@@ -25,6 +25,8 @@ public class Shop : MonoBehaviour
         _audioSourceShopNotification = GetComponent<AudioSource>();
         BoomerangProjectile.AddDistance(5);
         BoomerangProjectile.AddDamage(1);
+
+        DisableShop();
     }
 
     // Update is called once per frame
@@ -62,7 +64,6 @@ public class Shop : MonoBehaviour
 
     public void EnableShop()
     {
-        
         _canvas.SetActive(true);
     }
 

@@ -22,6 +22,12 @@ public class Enemy : MonoBehaviour
     private bool _isShooting = false;
     private float _shootTimer;
 
+    public GameObject Target
+    {
+        get { return _target; }
+        set { _target = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

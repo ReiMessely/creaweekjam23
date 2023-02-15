@@ -34,6 +34,15 @@ public class Enemy : MonoBehaviour
         _melee = _meleeBox.GetComponent<MeleeAttack>();
         _melee.EnemyScript = this;
     }
+    private void OnEnable()
+    {
+        Health.OnDeath += OnDeath;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnDeath -= OnDeath;
+    }
 
     // Update is called once per frame
     private void Update()
@@ -100,5 +109,10 @@ public class Enemy : MonoBehaviour
         {
             return _meleeDamage;
         }
+    }
+
+    void OnDeath()
+    {
+        Debug.Log("Enemy Dead");
     }
 }

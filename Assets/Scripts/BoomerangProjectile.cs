@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BoomerangProjectile : MonoBehaviour
 {
-    [SerializeField] private float _maxDistance;
+    [SerializeField] static private float _maxDistance;
     [SerializeField] private float _grabRange;
     [SerializeField] private float _initialSpeed;
-    [SerializeField] private float _damage = 1;
+    [SerializeField] static private float _damage = 1;
     private GameObject _playerRef;
     private float _currentSpeed;
     private float _acceleration;
@@ -82,5 +82,15 @@ public class BoomerangProjectile : MonoBehaviour
     float GetDeaccel(float finalVel, float initVel, float distance)
     {
         return ((finalVel * finalVel) - (initVel * initVel)) / (distance *2);
+    }
+
+    public static void AddDamage(float amount)
+    {
+        _damage += amount;
+    }
+
+    public static void AddDistance(float amount)
+    {
+        _maxDistance += amount;
     }
 }

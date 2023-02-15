@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Camera _mainCameraRef;
     [SerializeField] private GameObject _capsule;
     [SerializeField] private GameObject _boomerang;
-    [SerializeField] private int _nrBoomerangs;
+    [SerializeField] static private int _nrBoomerangs;
     private int _boomerangsInUse;
 
 
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _mainCameraRef = _mainCamera.GetComponent<Camera>();
+        _nrBoomerangs = 1;
     }
 
 
@@ -75,5 +76,9 @@ public class PlayerController : MonoBehaviour
         --_boomerangsInUse;
     }
 
+    public static void AddBoomerangAmount()
+    {
+        _nrBoomerangs++;
+    }
 
 }

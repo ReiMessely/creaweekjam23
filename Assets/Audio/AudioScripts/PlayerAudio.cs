@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerAudio : MonoBehaviour
 {
     private AudioSource _audioSource;
-    [SerializeField] private AudioPatch _playerDeathPatch;
+    private AudioSource _shootAudioSource;
+    [SerializeField] private AudioPatch _playerShootPatch;
+    [SerializeField] private GnomeDeathSoundScript _playerDeathSoundScript;
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        _shootAudioSource = transform.GetChild(0).GetChild(0).GetComponent<AudioSource>();
     }
     public void PlayFootstep(AudioPatch patch)
     {
@@ -18,7 +21,12 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayPlayerDeathSound()
     {
-        _playerDeathPatch.PlayOneShot(_audioSource);
+        _playerDeathSoundScript.gameObject.transform.position = transform.position;
+        _playerDeathSoundScript.PlayDeathSound();
+    }
+
+    public void PlayShootSound()
+    {
+        _playerShootPatch.Play(_shootAudioSource);
     }
 }
-

@@ -60,6 +60,10 @@ public class Enemy : MonoBehaviour
             // RANGED COMBAT
             if (_projectile)
             {
+                if (_target == null)
+                {
+                    return;
+                }
                 if ((_target.transform.position - transform.position).sqrMagnitude <= _attackRange * _attackRange)
                 {
                     _isShooting = true;

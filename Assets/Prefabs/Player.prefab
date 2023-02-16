@@ -102,6 +102,7 @@ MonoBehaviour:
   _mainCamera: {fileID: 0}
   _capsule: {fileID: 2941516620559272811}
   _boomerang: {fileID: 3507155125034191563, guid: dc9d1236776646443913adf49ac88b17, type: 3}
+  animator: {fileID: 9071978289627809160}
 --- !u!114 &2941516621674339706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b42f40825936354baef7106062ac9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerDeathPatch: {fileID: 11400000, guid: 048b4986fd3308b45bea583c6744041e, type: 2}
+  _playerShootPatch: {fileID: 11400000, guid: c70959cd0c75e344fb686547145f44e4, type: 2}
+  _playerDeathSoundScript: {fileID: 0}
 --- !u!81 &3815887278733962275
 AudioListener:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ AudioSource:
   m_GameObject: {fileID: 2327754388260504904}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8527823378245515897, guid: 5bd8770ca4be9ba458596ce1cdd95518, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -390,7 +392,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -482,5 +484,10 @@ MonoBehaviour:
 --- !u!4 &3100175172698611698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
+  m_PrefabInstance: {fileID: 3210135907656202265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9071978289627809160 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1100d75dcea57094fb2f241efc11fbd9, type: 3}
   m_PrefabInstance: {fileID: 3210135907656202265}
   m_PrefabAsset: {fileID: 0}

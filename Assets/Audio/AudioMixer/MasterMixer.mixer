@@ -73,6 +73,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-5375406138202814503
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: c1b29c48137883340b6409c927a9388b
+  m_EffectName: Attenuation
+  m_MixLevel: 4fd52671f91470b4f9c50dfa607f8b19
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-3529569090622324935
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -103,6 +117,7 @@ AudioMixerGroupController:
   m_GroupID: cb4482b86f1c9504e9ee0e980453dc71
   m_Children:
   - {fileID: -8878413028125926801}
+  - {fileID: 8527823378245515897}
   m_Volume: 5aa3d9c92a24a434fb02504577dd4b69
   m_Pitch: 3776c9fc671aeaa4f8f10a7c0b0a19ec
   m_Send: 00000000000000000000000000000000
@@ -210,6 +225,7 @@ AudioMixerController:
     - cf294a9ef0110b74f911d126e8466c10
     - d05171a68118f384dbe2dd0978f479ce
     - 4ccf443217c30f14e9c7bcf6c53acce9
+    - 38d735590a021c942b7cda759907335d
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -258,7 +274,12 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 129141d6ea78e89498b6fd7f59c43f6b
   m_FloatValues:
+    939fc0276ddd33b4ca4181aa2afca86f: -4.9356413
+    2cf334f71b354014085333817f107f5c: -10.345207
+    580eb7a98cf398b44b2897ffe971974a: -0.54210335
     b740c91b1bd25514cbbd74683b7447f4: -0.08374828
+    899fa5ac38715db4fb288f18990a911c: -7.8940816
+    209495cdde305e74ea04512ff456c4f3: -2.2889833
   m_TransitionOverrides: {}
 --- !u!244 &1287251975195650781
 AudioMixerEffectController:
@@ -407,3 +428,22 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &8527823378245515897
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerAttack
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 38d735590a021c942b7cda759907335d
+  m_Children: []
+  m_Volume: 209495cdde305e74ea04512ff456c4f3
+  m_Pitch: 4af30da4a7501d5489a57af5c068da49
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5375406138202814503}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0

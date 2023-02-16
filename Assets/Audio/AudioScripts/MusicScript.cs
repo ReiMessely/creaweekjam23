@@ -25,17 +25,17 @@ public class MusicScript : MonoBehaviour
     private AudioSource ASlayerNightEnd;
     private AudioSource ASlayerNightStart;
 
-    private float maxVol = 0.3f;
+    private float maxVol = 0.1f;
 
-    private float volume1 = 0.6f;
-    private float volume2 = 0.6f;
-    private float volume3 = 0.6f;
-    private float volume4 = 0.6f;
-    private float volume5 = 0.6f;
-    private float volume6 = 0.6f;
-    private float volume7 = 0.6f;
-    private float volumeEnd = 0.6f;
-    private float volumeStart = 0.6f;
+    private float volume1 = 0.1f;
+    private float volume2 = 0.1f;
+    private float volume3 = 0.1f;
+    private float volume4 = 0.1f;
+    private float volume5 = 0.1f;
+    private float volume6 = 0.1f;
+    private float volume7 = 0.1f;
+    private float volumeEnd = 0.1f;
+    private float volumeStart = 0.1f;
 
     public float _fadeSpeed = 0.75f;
 

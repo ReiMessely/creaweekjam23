@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
+  m_FogColor: {r: 0.5855206, g: 0.9431373, b: 0.5607843, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.9292453, g: 0.54656905, b: 0.54656905, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 2043823168}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -316,8 +316,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281931496}
-  m_LocalRotation: {x: 0.30219617, y: -0.000000023195875, z: 0.000000007353513, w: 0.95324576}
-  m_LocalPosition: {x: -1.09, y: 15.889999, z: -13.490004}
+  m_LocalRotation: {x: 0.39182612, y: 0, z: 0, w: 0.9200393}
+  m_LocalPosition: {x: -1.09, y: 15.889999, z: -11.649996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 14.0199995, z: -19.890003}
+  m_FollowOffset: {x: 0, y: 14.0199995, z: -18.049995}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -545,7 +545,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.88699305, b: 0.7798149, a: 1}
   m_Intensity: 100000
   m_Range: 10
   m_SpotAngle: 30
@@ -777,7 +777,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -802,8 +802,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564811435}
-  m_LocalRotation: {x: 0.30219617, y: -0.000000023195875, z: 0.000000007353513, w: 0.95324576}
-  m_LocalPosition: {x: -1.09, y: 15.889999, z: -13.490004}
+  m_LocalRotation: {x: 0.39182612, y: 0, z: 0, w: 0.9200393}
+  m_LocalPosition: {x: -1.09, y: 15.889999, z: -11.649996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1214,6 +1214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2436152471846830342, guid: 1175a7070c2d516439df053cffeac80c, type: 3}
+      propertyPath: CurrentTimeOfDay
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2436152471846830343, guid: 1175a7070c2d516439df053cffeac80c, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1350,11 +1354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 122193537251881004, guid: a09c1804ee619a1439549341f52dddf7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9200393
       objectReference: {fileID: 0}
     - target: {fileID: 122193537251881004, guid: a09c1804ee619a1439549341f52dddf7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.39182615
       objectReference: {fileID: 0}
     - target: {fileID: 122193537251881004, guid: a09c1804ee619a1439549341f52dddf7, type: 3}
       propertyPath: m_LocalRotation.y

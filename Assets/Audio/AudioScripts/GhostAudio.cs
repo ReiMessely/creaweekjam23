@@ -5,23 +5,35 @@ using UnityEngine;
 public class GhostAudio : MonoBehaviour
 {
     private AudioSource _audioSource;
-    [SerializeField] private AudioPatch _GhostMovePatch;
-
+    private AudioSource _attackAudioSource;
+    [SerializeField] private AudioPatch _ghostMovePatch;
+    [SerializeField] private AudioPatch _ghostDeathPatch;
+    [SerializeField] private AudioPatch _ghostRangedAttackPatch;
+    [SerializeField] private AudioPatch _ghostMeleeAttackPatch;
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        _attackAudioSource = transform.GetChild(0).GetComponent<AudioSource>();
     }
     private void Start()
     {
-        PlayGhostMove(_GhostMovePatch);
+        PlayGhostMove(_ghostMovePatch);
     }
     public void PlayGhostMove(AudioPatch patch)
     {
         patch.Play(_audioSource);
     }
-    public void PlayGhostAttack()
+    public void PlayGhostMeleeAttack()
     {
-
+        _ghostMeleeAttackPatch.Play(_attackAudioSource);
+    }
+    public void PlayGhostRangedAttack()
+    {
+        _ghostRangedAttackPatch.Play(_attackAudioSource);
+    }
+    public void PlayGhostDeath()
+    {
+        _ghostDeathPatch.PlayOneShot(_audioSource);
     }
 }
 

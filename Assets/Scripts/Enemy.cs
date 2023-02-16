@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _engageRange = 4.0f;
     [SerializeField] private float _attackRange = 5.0f;
     private bool _isMoving = false;
+    [SerializeField] private GhostAudio _ghostAudioScript;
 
     [Header("Combat")]
     [SerializeField] private GameObject _projectileSocket;
@@ -67,6 +68,7 @@ public class Enemy : MonoBehaviour
                     if (_shootTimer <= 0)
                     {
                         // Shoot
+                        _ghostAudioScript.PlayGhostRangedAttack();
                         _projectileSocket.transform.LookAt(_target.transform);
                         Instantiate(_projectile, _projectileSocket.transform.position, _projectileSocket.transform.rotation);
                         ResetShootTimer();
@@ -119,6 +121,6 @@ public class Enemy : MonoBehaviour
 
     void OnDeath()
     {
-
+        _ghostAudioScript.PlayGhostDeath();
     }
 }

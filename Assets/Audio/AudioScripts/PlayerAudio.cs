@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAudio : MonoBehaviour
 {
     private AudioSource _audioSource;
-
+    [SerializeField] private AudioPatch _playerDeathPatch;
 
     private void Awake()
     {
@@ -14,6 +14,11 @@ public class PlayerAudio : MonoBehaviour
     public void PlayFootstep(AudioPatch patch)
     {
         patch.Play(_audioSource);
+    }
+
+    public void PlayPlayerDeathSound()
+    {
+        _playerDeathPatch.PlayOneShot(_audioSource);
     }
 }
 

@@ -2,17 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private PlayerAudio _playerAudioScript;
     [SerializeField] private float _healthAmount = 10;
     private float _maxHealth;
 
     public delegate void OnDeathAction();
     public static event OnDeathAction OnDeath;
-
-    bool _isDying;
 
     // Start is called before the first frame update
     void Start()
@@ -22,36 +20,23 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (_isDying) { return; }
-
         _healthAmount -= damage;
-      
+        Debug.Log(_healthAmount);
         Math.Clamp(_healthAmount, 0, _healthAmount);
         if (_healthAmount > 0)
             return;
 
         if (gameObject.tag == "Player")
         {
-            if (!_isDying)
-            {
-                Invoke("Kill", 5f);
-                _isDying= true;
-            }
-           
+            _playerAudioScript.PlayPlayerDeathSound();
         }
         else if (OnDeath != null)
         {
             OnDeath();
-            Destroy(gameObject);
         }
 
 
 
-    }
-
-    private void Kill()
-    {
-        SceneManager.LoadScene("MainMenu");
         Destroy(gameObject);
 
     }

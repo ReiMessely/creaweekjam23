@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private PlayerAudio _playerAudioScript;
     [SerializeField] private float _healthAmount = 10;
     private float _maxHealth;
 
@@ -27,7 +28,7 @@ public class Health : MonoBehaviour
 
         if (gameObject.tag == "Player")
         {
-            Debug.Log("play death");
+            _playerAudioScript.PlayPlayerDeathSound();
         }
         else if (OnDeath != null)
         {

@@ -102,7 +102,6 @@ MonoBehaviour:
   _mainCamera: {fileID: 0}
   _capsule: {fileID: 2941516620559272811}
   _boomerang: {fileID: 3507155125034191563, guid: dc9d1236776646443913adf49ac88b17, type: 3}
-  _nrBoomerangs: 1
 --- !u!114 &2941516621674339706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afeafed046db3d146b4b61a4f0cf7cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerAudioScript: {fileID: 706480600356182703}
   _healthAmount: 10
 --- !u!54 &31160541750406549
 Rigidbody:
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b42f40825936354baef7106062ac9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerDeathPatch: {fileID: 11400000, guid: 048b4986fd3308b45bea583c6744041e, type: 2}
 --- !u!81 &3815887278733962275
 AudioListener:
   m_ObjectHideFlags: 0

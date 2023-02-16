@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Health : MonoBehaviour
         if (gameObject.tag == "Player")
         {
             _playerAudioScript.PlayPlayerDeathSound();
+            SceneManager.LoadScene("MainMenu");
         }
         else if (OnDeath != null)
         {
